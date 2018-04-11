@@ -10,4 +10,3 @@
 <th data-column-id="commands" data-formatter="commands"
     data-sortable="false" data-width="10%">编辑|删除
 </th>
-
