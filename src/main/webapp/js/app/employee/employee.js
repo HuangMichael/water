@@ -8,9 +8,9 @@ $(function () {
 
 
 //导出必须配置的两个量
-    dataTableName = "#customerListTable";
-    docName = "用户信息";
-    mainObject = "customer";
+    dataTableName = "#employeeListTable";
+    docName = "职工信息";
+    mainObject = "employee";
     formName = "#form";
 
 
@@ -44,6 +44,9 @@ $(function () {
         converters: {
             showStatus: {
                 to: showStatus
+            },
+            showGender: {
+                to: showGender
             }
         }
     })
@@ -55,7 +58,7 @@ $(function () {
     vdm = new Vue({
         el: formName,
         data: {
-            "customer": null
+            "employee": null
         }
     });
     initSelect();
@@ -113,7 +116,7 @@ function del(id) {
  */
 function edit(id) {
     var object = findByIdAndObjectName(id, mainObject);
-    vdm.$set("customer", object);
+    vdm.$set("employee", object);
     $("#editModal").modal("show");
 }
 
@@ -122,7 +125,7 @@ function edit(id) {
  * 编辑记录
  */
 function add() {
-    vdm.$set("customer", null);
+    vdm.$set("employee", null);
     $("#editModal").modal("show");
 }
 

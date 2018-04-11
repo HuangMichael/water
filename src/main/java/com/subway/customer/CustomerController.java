@@ -50,7 +50,7 @@ public class CustomerController extends BaseController {
      */
     @RequestMapping(value = "/data", method = RequestMethod.POST)
     @ResponseBody
-    public MyPage data(HttpSession session, HttpServletRequest request, @RequestParam(value = "current", defaultValue = "0") int current, @RequestParam(value = "rowCount", defaultValue = "10") Long rowCount, @RequestParam(value = "searchPhrase", required = false) String searchPhrase) {
+    public MyPage data( HttpServletRequest request, @RequestParam(value = "current", defaultValue = "0") int current, @RequestParam(value = "rowCount", defaultValue = "10") Long rowCount, @RequestParam(value = "searchPhrase", required = false) String searchPhrase) {
         Map<String, String[]> parameterMap = request.getParameterMap();
         Pageable pageable = new PageRequest(current - 1, rowCount.intValue(), super.getSort(parameterMap));
         return new PageUtils().searchBySortService(customerSearchService, searchPhrase, SEARCH_PARAM_SIZE, current, rowCount, pageable);
@@ -79,7 +79,7 @@ public class CustomerController extends BaseController {
 
 
     /**
-     * @param 用户信息 信息
+     * @param customer 用户信息 信息
      * @return 保存用户信息信息
      */
     @RequestMapping(value = "/save", method = RequestMethod.POST)
