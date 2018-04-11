@@ -7,7 +7,6 @@
 <th data-column-id="address" data-width="15%">详细地址</th>
 <th data-column-id="gender" data-width="5%" data-converter="showGender">性别</th>
 <th data-column-id="idCard" data-width="15%">身份证号</th>
-<th data-column-id="photoUrl" data-width="5%">照片路径</th>
-<th data-column-id="telephone" data-width="5%">联系电话</th>
+<th data-column-id="telephone" data-width="10%">联系电话</th>
 <th data-column-id="status" data-width="6%" data-converter="showStatus">状态</th>
 <th data-column-id="commands" data-formatter="commands" data-sortable="false" data-width="10%">编辑|删除</th>
